@@ -4,3 +4,5 @@ def sum(num1: int, num2: int) -> int:
 
 
 print(sum(5, 6))
+
+print("hi")
