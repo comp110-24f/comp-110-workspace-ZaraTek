@@ -5,3 +5,13 @@ def celsius_to_fahrenheit(degrees_c: int) -> float:
 
 boiling_point = celsius_to_fahrenheit(100)
 print(boiling_point)
+
+
+def division(x: int, y: int) -> float:
+    return y / x
+    print(y % x)
+
+
+print(division(y=64, x=16))
+
+print(int(64 / 16))
