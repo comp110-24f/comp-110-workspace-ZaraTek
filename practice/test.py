@@ -15,3 +15,7 @@ def division(x: int, y: int) -> float:
 print(division(y=64, x=16))
 
 print(int(64 / 16))
+
+x: int = 1
+x = x + 1
+print("x:", x)
