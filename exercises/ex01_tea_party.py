@@ -1,4 +1,4 @@
-"""A program to help plan a tea party by calculating what is needed and the expected cost"""
+"""A program to help plan a tea party"""
 
 __author__: str = "730772738"
 
