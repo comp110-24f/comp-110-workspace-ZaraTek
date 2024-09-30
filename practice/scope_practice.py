@@ -8,8 +8,8 @@ def remove_chars(msg: str, char: str) -> str:
         index += 1
     return copy
 
-if __name__ == "__main__":
-    print(remove_chars("football", "o"))
+
+print(remove_chars("yoyo", "o"))
 
 # built-in python method
 print("football".replace("o", ""))
