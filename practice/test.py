@@ -19,3 +19,19 @@ print(int(64 / 16))
 x: int = 1
 x = x + 1
 print("x:", x)
+
+xs = "01"
+ys = "23"
+
+
+def get_coords() -> None:
+    x_idx: int = 0
+    while x_idx < len(xs):
+        y_idx: int = 0
+        while y_idx < len(ys):
+            print(f"({xs[x_idx]},{ys[y_idx]})")
+            y_idx += 1
+        x_idx += 1
+
+
+get_coords()
