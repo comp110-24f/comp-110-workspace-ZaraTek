@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+__author__ = "730772738"
+
 
 class Node:
     """Node class."""
@@ -65,11 +67,27 @@ def max(head: Node | None) -> int:
             return max_in_rest
 
 
-# def linkify(input_list: list[int]) -> Node | None:
-#     """Return a linked list given a list[int]."""
-#     if not input_list:
-#         return None
-#     head: Node = Node(list[0])
+def recursive_range(start: int, end: int) -> Node | None:
+    """Creates linked list w/ values from start to end."""
+    if start > end:  # Edge case
+        raise ValueError("Start cannot be greater then end.")
+    if start == end:  # Base case
+        return None
+    return Node(start, recursive_range(start + 1, end))  # Recursive case
+
+
+def linkify(input_list: list[int]) -> Node | None:
+    """Return a linked list given a list[int]."""
+    if not input_list:
+        return None
+    return Node(input_list[0], linkify(input_list[1:]))
+
+
+def scale(head: Node | None, factor: int) -> Node | None:
+    """Return a linked list where each node is multiplied by a scale factor of given list."""
+    if head is None:
+        return None
+    return Node(head.value * factor, scale(head.next, factor))
 
 
 three: Node = Node(3, None)
@@ -80,3 +98,8 @@ one: Node = Node(1, two)
 print(value_at(one, 2))
 print(value_at(Node(10, Node(20, Node(30, None))), 0))
 print(max(Node(10, Node(20, Node(30, None)))))
+print(linkify([10, 20, 30, 40]))
+
+head_node = linkify([1, 2, 3])
+print(scale(head_node, 2))
+print(head_node)
