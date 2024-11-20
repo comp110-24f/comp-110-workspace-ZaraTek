@@ -28,8 +28,18 @@ def to_str(head: Node | None) -> str:
     else:
         rest: str = to_str(head.next)
         return f"{head.value} -> {rest}"
+    
+
+def factorial(n: int) -> int:
+    if n < 0:
+        raise ValueError("Cannot call factorial with negative values")
+    if n <= 1:
+        return 1
+    return n * factorial(n-1)
 
 
 two: Node = Node(2, None)
 one: Node = Node(1, two)
-print(two)
+# print(two)
+
+print(factorial(1))
